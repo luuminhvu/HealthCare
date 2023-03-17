@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
-    android:background="@drawable/back2">
+    android:background="@drawable/background"
+    tools:context=".FindDoctorActivity">
 
     <TextView
-        android:id="@+id/titleTopDoctor"
+        android:id="@+id/titleFindDoctor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="12dp"
         android:layout_marginTop="24dp"
         android:text="HEALTHCARE"
         android:textColor="@color/white"
@@ -22,6 +21,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/titleTopDoctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="Top Doctor"
+        android:textColor="@color/purple_200"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleFindDoctor" />
+
     <ImageButton
         android:id="@+id/idFamilyPhysician"
         android:layout_width="124dp"
@@ -30,9 +43,10 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/btn_bg"
         android:backgroundTint="#E91E63"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleTopDoctor"
-        app:srcCompat="@drawable/home" />
+        app:srcCompat="@drawable/family_physicians" />
 
     <ImageButton
         android:id="@+id/idDietician"
@@ -42,11 +56,12 @@
         android:layout_marginEnd="44dp"
         android:background="@drawable/btn_bg"
         android:backgroundTint="#4CAF50"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.714"
         app:layout_constraintStart_toEndOf="@+id/idFamilyPhysician"
         app:layout_constraintTop_toBottomOf="@+id/titleTopDoctor"
-        app:srcCompat="@drawable/language" />
+        app:srcCompat="@drawable/dietician" />
 
     <TextView
         android:id="@+id/textView12"
@@ -54,7 +69,7 @@
         android:layout_height="27dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="20dp"
-        android:text="Lab Test"
+        android:text="Physicial"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/textView13"
@@ -67,8 +82,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="64dp"
-        android:text="Buy Medicine"
+        android:layout_marginEnd="80dp"
+        android:text="Dietician"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,9 +98,10 @@
 
         android:background="@drawable/btn_bg"
         android:backgroundTint="#FF5722"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:srcCompat="@drawable/chat" />
+        app:srcCompat="@drawable/dentist" />
 
     <ImageButton
         android:id="@+id/idSurgeon"
@@ -96,19 +112,21 @@
         android:layout_marginEnd="60dp"
         android:background="@drawable/btn_bg"
         android:backgroundTint="#CDDC39"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/idDentist"
         app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:srcCompat="@drawable/calendar" />
+        app:srcCompat="@drawable/surgeon"
+        tools:srcCompat="@drawable/surgeon" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="92dp"
         android:layout_marginTop="16dp"
-        android:text="Find Doctor"
+        android:text="Dentist"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,8 +137,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="52dp"
-        android:text="Health Articles"
+        android:layout_marginEnd="80dp"
+        android:text="Surgeon"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -134,9 +152,10 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/btn_bg"
         android:backgroundTint="#9C27B0"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:srcCompat="@drawable/widgets" />
+        app:srcCompat="@drawable/cardiologists" />
 
     <ImageButton
         android:id="@+id/idExit"
@@ -156,7 +175,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
         android:layout_marginTop="44dp"
-        android:text="Order Details"
+        android:text="Cardiologist"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -175,6 +194,5 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idExit" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
