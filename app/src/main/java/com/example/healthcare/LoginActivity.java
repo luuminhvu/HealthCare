@@ -20,10 +20,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        edUsername = findViewById(R.id.editTextRegUsername);
-        edPassword = findViewById(R.id.editTextRegPassword);
-        btnLogin = findViewById(R.id.buttonReg);
-        tvRegister = findViewById(R.id.textViewExistingUser);
+        edUsername = findViewById(R.id.editTextLoginUsername);
+        edPassword = findViewById(R.id.editTextLoginPassword);
+        btnLogin = findViewById(R.id.buttonLogin);
+        tvRegister = findViewById(R.id.textViewNewUser);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

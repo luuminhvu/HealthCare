@@ -19,11 +19,11 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        edUsername = findViewById(R.id.editTextRegUsername);
+        edUsername = findViewById(R.id.editTextRegUserName);
         edPassword = findViewById(R.id.editTextRegPassword);
         edEmail = findViewById(R.id.editTextRegEmail);
         edConfirmPassword = findViewById(R.id.editTextRegConfirmPassword);
-        btnRegister = findViewById(R.id.buttonReg);
+        btnRegister = findViewById(R.id.buttonRegister);
         tvLogin = findViewById(R.id.textViewExistingUser);
         tvLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
                 } else {
                     if (password.compareTo(confirmPassword) == 0) {
                         if (InValid(password)) {
-                            db.Register(username, password, email);
+                            db.Register(username,email,password);
                             Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                         } else {
