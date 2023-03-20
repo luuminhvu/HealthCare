@@ -29,11 +29,25 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(HomeActivity.this, LoginActivity.class));
             }
         });
-        ImageButton btnFindDoctor = findViewById(R.id.idDentist);
+        ImageButton btnFindDoctor = findViewById(R.id.idFindDoctor);
         btnFindDoctor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(HomeActivity.this, FindDoctorActivity.class));
+            }
+        });
+        ImageButton btnLabTest = findViewById(R.id.idLabTest);
+        btnLabTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, LabTestActivity.class));
+            }
+        });
+        ImageButton btnOrderDetails = findViewById(R.id.idOrderDetails);
+        btnOrderDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, OrderDetailsActivity.class));
             }
         });
     }

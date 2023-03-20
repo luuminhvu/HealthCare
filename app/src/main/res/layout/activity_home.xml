@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/idFamilyPhysician"
+        android:id="@+id/idLabTest"
         android:layout_width="124dp"
         android:layout_height="113dp"
         android:layout_marginStart="60dp"
@@ -35,7 +35,7 @@
         app:srcCompat="@drawable/home" />
 
     <ImageButton
-        android:id="@+id/idDietician"
+        android:id="@+id/idBuyMedicine"
         android:layout_width="124dp"
         android:layout_height="113dp"
         android:layout_marginTop="40dp"
@@ -44,7 +44,7 @@
         android:backgroundTint="#4CAF50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.714"
-        app:layout_constraintStart_toEndOf="@+id/idFamilyPhysician"
+        app:layout_constraintStart_toEndOf="@+id/idLabTest"
         app:layout_constraintTop_toBottomOf="@+id/titleTopDoctor"
         app:srcCompat="@drawable/language" />
 
@@ -60,7 +60,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView13"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idFamilyPhysician" />
+        app:layout_constraintTop_toBottomOf="@+id/idLabTest" />
 
     <TextView
         android:id="@+id/textView13"
@@ -72,10 +72,10 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idDietician" />
+        app:layout_constraintTop_toBottomOf="@+id/idBuyMedicine" />
 
     <ImageButton
-        android:id="@+id/idDentist"
+        android:id="@+id/idFindDoctor"
         android:layout_width="124dp"
         android:layout_height="113dp"
         android:layout_marginStart="60dp"
@@ -88,7 +88,7 @@
         app:srcCompat="@drawable/chat" />
 
     <ImageButton
-        android:id="@+id/idSurgeon"
+        android:id="@+id/idHealthArticles"
 
         android:layout_width="124dp"
         android:layout_height="113dp"
@@ -98,7 +98,7 @@
         android:backgroundTint="#CDDC39"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/idDentist"
+        app:layout_constraintStart_toEndOf="@+id/idFindDoctor"
         app:layout_constraintTop_toBottomOf="@+id/textView13"
         app:srcCompat="@drawable/calendar" />
 
@@ -112,7 +112,7 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idDentist" />
+        app:layout_constraintTop_toBottomOf="@+id/idFindDoctor" />
 
     <TextView
         android:id="@+id/textView15"
@@ -124,10 +124,10 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idSurgeon" />
+        app:layout_constraintTop_toBottomOf="@+id/idHealthArticles" />
 
     <ImageButton
-        android:id="@+id/idCardiologist"
+        android:id="@+id/idOrderDetails"
         android:layout_width="124dp"
         android:layout_height="113dp"
         android:layout_marginStart="60dp"
@@ -161,7 +161,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idCardiologist"
+        app:layout_constraintTop_toBottomOf="@+id/idOrderDetails"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
