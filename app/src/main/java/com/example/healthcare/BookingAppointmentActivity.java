@@ -71,6 +71,12 @@ public class BookingAppointmentActivity extends AppCompatActivity {
                 startActivity(new Intent(BookingAppointmentActivity.this, FindDoctorActivity.class));
             }
         });
+        btnBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     private void initDatePicker() {

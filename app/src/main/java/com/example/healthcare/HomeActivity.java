@@ -50,5 +50,12 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(HomeActivity.this, OrderDetailsActivity.class));
             }
         });
+        ImageButton btnBuyMedicine = findViewById(R.id.idBuyMedicine);
+        btnBuyMedicine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, BuyMedicineActivity.class));
+            }
+        });
     }
 }
