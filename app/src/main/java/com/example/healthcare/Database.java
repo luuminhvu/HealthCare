@@ -145,4 +145,21 @@ public class Database extends SQLiteOpenHelper {
         db.close();
         return arr;
     }
+    public int checkAppointmentsExist(String username,String fullname, String address, String contact, String date, String time){
+        int result = 0;
+        String str[] = new String[6];
+        str[0] = username;
+        str[1] = fullname;
+        str[2] = address;
+        str[3] = contact;
+        str[4] = date;
+        str[5] = time;
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM ORDERPLACE WHERE USERNAME=? AND FULLNAME=? AND ADDRESS=? AND CONTACTNO=? AND DATE=? AND TIME=?",str);
+        if(c.moveToFirst()){
+            result = 1;
+        }
+        db.close();
+        return result;
+    }
 }

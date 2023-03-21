@@ -16,7 +16,7 @@ import java.util.HashMap;
 
 public class DoctorDetailsActivity extends AppCompatActivity {
     private String[][] doctors_details1 ={
-            {"Doctor Name:Dr. John Doe","Hospital Address: 1234 Main Street, New York","Exp :10 years","Mobile Number: 1234567890","600"},
+            {"Doctor Name:Dr. John With","Hospital Address: 1234 Main Street, New York","Exp :10 years","Mobile Number: 1234567890","600"},
             {"Doctor Name:Dr. Jane Doe","Hospital Address: 1234 Main Street, New York","Exp :10 years","Mobile Number: 1234567890","600"},
             {"Doctor Name:Dr. John Doe","Hospital Address: 1234 Main Street, New York","Exp :10 years","Mobile Number: 1234567890","600"},
             {"Doctor Name:Dr. Jane Doe","Hospital Address: 1234 Main Street, New York","Exp :10 years","Mobile Number: 1234567890","600"},

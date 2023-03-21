@@ -86,7 +86,6 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
                 it.putExtra("price",tvTotal.getText());
                 it.putExtra("date",btnDate.getText());
                 startActivity(it);
-
             }
         });
 

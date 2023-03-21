@@ -74,7 +74,7 @@
         android:layout_marginTop="28dp"
         android:ems="10"
         android:gravity="start"
-        android:inputType="textPersonName|textImeMultiLine"
+        android:inputType="textMultiLine"
         android:text="Name"
         android:textColor="@android:color/holo_orange_dark"
         android:textStyle="bold"
