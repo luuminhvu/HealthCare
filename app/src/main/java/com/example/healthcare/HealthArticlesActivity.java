@@ -15,10 +15,10 @@ import java.util.HashMap;
 
 public class HealthArticlesActivity extends AppCompatActivity {
     public String[][] health_details ={
-            {"Walking daily","","","","Click More Details"},
-            {"Home Care Of Covid-19","","","","Click More Details"},
-            {"Stop Smoking","","","","Click More Details"},
-            {"Healthy Gut","","","","Click More Details"}
+            {"Walking daily","","","","Xem Thêm"},
+            {"Home Care Of Covid-19","","","","Xem Thêm"},
+            {"Stop Smoking","","","","Xem Thêm"},
+            {"Healthy Gut","","","","Xem Thêm"}
     };
     private int[] images = {R.drawable.health1,R.drawable.health2,R.drawable.health3,R.drawable.health4,R.drawable.health5};
     HashMap<String,String> item;

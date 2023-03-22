@@ -45,11 +45,11 @@ public class LabTestDetailsActivity extends AppCompatActivity {
                 float price = Float.parseFloat(intent.getStringExtra("text3").toString());
                 Database db = new Database(getApplicationContext(),"HealthCare",null,1);
                 if(db.checkCart(username,product)==1){
-                    Toast.makeText(getApplicationContext(), "Already in cart", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Đã có trong giỏ hàng", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     db.addCart(username,product,price,"Lab");
-                    Toast.makeText(getApplicationContext(), "Added to cart", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Đã thêm vào Giỏ hàng", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(LabTestDetailsActivity.this, LabTestActivity.class));
                 }
 

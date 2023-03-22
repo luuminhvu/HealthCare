@@ -81,11 +81,11 @@ public class BookingAppointmentActivity extends AppCompatActivity {
                 String username = sp.getString("username", "").toString();
                 Database db = new Database(getApplicationContext(),"HealthCare",null,1);
                 if(db.checkAppointmentsExist(username,title+"=>"+fullname,address,contact,dateButton.getText().toString(),timeButton.getText().toString())==1) {
-                    Toast.makeText(getApplicationContext(),"Appointments already booked.",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Các cuộc hẹn đã được đặt trước.",Toast.LENGTH_SHORT).show();
                 }
                 else{
                     db.addOrder(username,title+"=>"+fullname,address,contact,0,dateButton.getText().toString(),timeButton.getText().toString(),Float.parseFloat(fees),"appointment");
-                    Toast.makeText(getApplicationContext(),"Appointment booked successfully.",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Đặt lịch hẹn thành công.",Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(BookingAppointmentActivity.this, HomeActivity.class));
                 }
             }

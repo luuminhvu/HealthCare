@@ -23,24 +23,37 @@ public class BuyMedicineActivity extends AppCompatActivity {
             {"Vitamin B12 Tablets","","","","350"},
     };
     private String[] package_details = {
-            "Building and keeping the bones & teeth strong\n" + "Reducing Fatigue/stress and muscular pains\n" +
+            "Giảm nguy cơ đột quỵ do vitamin B có liên quan đến quá trình tạo máu và sự phát triển của tế bào.\n" +
+                    "Ngăn chặn bệnh tê phù beriberi do thiếu vitamin B1 gây nên.\n" +
+                    "Giúp tăng cường hệ miễn dịch của cơ thể.\n" +
+                    "Tham gia chuyển hóa, cung cấp năng lượng cho các hoạt động của cơ thể.",
 
-                    "Boosting immunity and increasing resistance against infection",
+            "Phòng và điều trị bệnh do thiếu vitamin này (bệnh scorbut).\n" +
+                    "Tăng sức đề kháng của cơ thể để chống lại bệnh nhiễm khuẩn, nhiễm độc, mau lành vết thương.\n" +
+                    "Điều trị mệt mỏi do cảm cúm hoặc sau khi ốm.\n" +
+                    "Axit hóa nước tiểu để giải độc trong một số trường hợp.",
 
-            "Chromium is an essential trace mineral that plays an important role in helping insulin regular",
-            "Provides relief from vitamin B deficiencies\n" +
-                    "Helps in formation of red blood cellsin\n" +
-                    "Maintains healthy nervous systen\n",
-            "It promotes health as well as skin benefits\n" +
-                    "It helps reduce skin blemish and pigmentation.\n" + "It act as safeguard the skin from the harsh UVA and UVB sun rays",
-            "Pole 650 Tablet helps relieve pain and fever by blocking the release of certain chemical messengers in the brain\n" +
-                    "Helps relieve fever and bring down a high temperature\n" +
-                    "Suitable for people with a heart condition or high blood pressure",
+            "Vitamin D3 thường được sử dụng để điều trị hoặc ngăn ngừa tình trạng do thiếu vitamin D, đặc biệt là tình trạng về da hoặc xương. \n" +
+                    "Loại vitamin này tốt các loại vitamin D khác và làm tăng nồng độ vitamin D trong máu cao hơn vitamin D2.",
+
+
+            "Vitamin E giúp làn da mịn màng, tươi trẻ, hạn chế nếp nhăn. \n" +
+                    "Tình trạng da khô sạm, nhăn nheo, thiếu sức sống, tóc khô và dễ gãy rụng thường là do thiếu vitamin E gây nên. \n" +
+                    "Do đó, trong hầu hết các sản phẩm chăm sóc da và tóc, nhà sản xuất thường đưa vitamin E vào trong thành phần.",
+
+            "Ngăn ngừa những vấn đề đông máu ở trẻ sơ sinh bị thiếu hụt vitamin K\n" +
+                    "Điều trị xuất huyết do các thuốc như salicylate, sulfonamide, quinine, quinidine hoặc kháng sinh\n" +
+                    "Điều trị và ngăn ngừa thiếu hụt vitamin K\n" +
+                    "Ngăn ngừa và điều trị yếu xương và giảm triệu chứng ngứa trong bệnh xơ gan mật\n" +
+                    "Uống vitamin K2 (menaquinone) để trị loãng xương, mất xương do sử dụng steroids cũng như hạ cholesterol máu ở những người lọc máu\n" +
+                    "Thoa lên da để loại bỏ tĩnh mạch mạng nhện, vết bầm tím, vết sẹo, vết rạn da và bỏng",
+
+            "Vitamin B12 đóng một vai trò quan trọng trong việc giúp cơ thể sản xuất các tế bào hồng cầu. Thiếu vitamin B12 gây ra giảm sự hình thành tế bào hồng cầu.\n" +
+                    "\n" +
+                    "Các tế bào hồng cầu khỏe mạnh có hình tròn và nhỏ, khi thiếu vitamin B12 chúng trở nên lớn hơn và thường có hình bầu dục. Do hình dạng lớn hơn và bất thường này, các tế bào hồng cầu không thể di chuyển từ tủy xương vào máu với tốc độ thích hợp, gây ra bệnh thiếu máu nguyên bào khổng lồ (thiếu máu hồng cầu to).",
             "Relieves the symptoms of a bacterial throat infection and soothes the recovery processin\n" +
                     "Provides a warm and conforting feeling during sore throat",
-            "Reduces the risk of calcium deficiency, Rickets, and Osteoporosis\n" +
-                    "Pronates mobility and flexibility of joints",
-            "Helps to reduce the iron deficiency due to chronic blood loss or low intake of iren",
+
     };
     HashMap<String, String> item;
     ArrayList list;
@@ -69,7 +82,7 @@ public class BuyMedicineActivity extends AppCompatActivity {
             item.put("line2",packages[i][1]);
             item.put("line3",packages[i][2]);
             item.put("line4",packages[i][3]);
-            item.put("line5","Total Price: "+packages[i][4]+"/-");
+            item.put("line5","Giá Tiền: "+packages[i][4]+"/-");
             list.add(item);
         }
         adapter = new SimpleAdapter(this,list,R.layout.multi_lines,new String[]{"line1","line2","line3","line4","line5"},new int[]{R.id.line_a,R.id.line_b,R.id.line_c,R.id.line_d,R.id.line_e});

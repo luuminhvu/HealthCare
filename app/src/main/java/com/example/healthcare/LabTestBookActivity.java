@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class LabTestBookActivity extends AppCompatActivity {
     EditText edFullName, edAddress, edPinCode, edContact;
-    Button btnBook;
+    Button btnBook,btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +35,11 @@ public class LabTestBookActivity extends AppCompatActivity {
                 Database db = new Database(getApplicationContext(),"HealthCare",null,1);
                 db.addOrder(username,edFullName.getText().toString(),edAddress.getText().toString(),edContact.getText().toString(),Integer.parseInt(edPinCode.getText().toString()),date.toString(),time.toString(),Float.parseFloat(price[1].toString()),"Lab");
                 db.removeCart(username,"Lab");
-                Toast.makeText(getApplicationContext(), "Booking Successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "\n" +
+                        "Đặt chỗ thành công", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(LabTestBookActivity.this, HomeActivity.class));
             }
         });
+
     }
 }

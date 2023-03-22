@@ -43,10 +43,10 @@ public class BuyMedicineDetailsActivity extends AppCompatActivity {
                 Float price = Float.parseFloat(intent.getStringExtra("text3").toString());
                 Database db = new Database(getApplicationContext(), "HealthCare", null, 1);
                 if (db.checkCart(username, product) == 1) {
-                    Toast.makeText(getApplicationContext(), "Already in Cart", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Đã có trong giỏ hàng", Toast.LENGTH_SHORT).show();
                 } else {
                     db.addCart(username, product, price,"medicine");
-                    Toast.makeText(getApplicationContext(), "Added to Cart", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Đã thêm vào giỏ hàng", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(BuyMedicineDetailsActivity.this, BuyMedicineActivity.class));
                 }
             }

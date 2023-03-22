@@ -40,18 +40,19 @@ public class RegisterActivity extends AppCompatActivity {
                 String confirmPassword = edConfirmPassword.getText().toString();
                 Database db = new Database(getApplicationContext(),"HealthCare",null,1);
                 if (username.length() == 0 || password.length() == 0 || email.length() == 0 || confirmPassword.length() == 0) {
-                    Toast.makeText(RegisterActivity.this, "Please enter all the details", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Vui lòng nhập tất cả các thông tin", Toast.LENGTH_SHORT).show();
                 } else {
                     if (password.compareTo(confirmPassword) == 0) {
                         if (InValid(password)) {
                             db.Register(username,email,password);
-                            Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Đăng Kí Thàn Công", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                         } else {
-                            Toast.makeText(RegisterActivity.this, "Password must contain atleast 1 letter, 1 digit and 1 special character", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Mật khẩu phải chứa ít nhất 1 chữ cái, 1 chữ số và 1 ký tự đặc biệt", Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        Toast.makeText(RegisterActivity.this, "Password and Confirm Password do not match", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this, "\n" +
+                                "Mật khẩu và Xác nhận mật khẩu không khớp", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
