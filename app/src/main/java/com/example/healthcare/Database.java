@@ -162,4 +162,12 @@ public class Database extends SQLiteOpenHelper {
         db.close();
         return result;
     }
+   //xoa deleteOrder theo phan tu chi dinh
+    public void deleteOrder(String fullname){
+        String str[] = new String[1];
+        str[0] = fullname;
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete("ORDERPLACE","FULLNAME=?",str);
+        db.close();
+    }
 }
