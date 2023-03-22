@@ -71,8 +71,9 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
         android:text="Khoa Ngoại"
-        android:textColor="@color/white"
+        android:textColor="@android:color/holo_orange_dark"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView13"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idFamilyPhysician" />
@@ -84,8 +85,9 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="61dp"
         android:text="BS Dinh Dưỡng"
-        android:textColor="@color/white"
+        android:textColor="@android:color/holo_orange_dark"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idDietician" />
 
@@ -127,8 +129,9 @@
         android:layout_marginStart="92dp"
         android:layout_marginTop="16dp"
         android:text="Nha Sĩ"
-        android:textColor="@color/white"
+        android:textColor="@android:color/holo_orange_dark"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idDentist" />
 
@@ -139,8 +142,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="61dp"
         android:text="BS Phẫu Thuật"
-        android:textColor="@color/white"
+        android:textColor="@android:color/holo_orange_dark"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idSurgeon" />
 
@@ -176,8 +180,9 @@
         android:layout_marginStart="68dp"
         android:layout_marginTop="44dp"
         android:text="BS Tim Mạch"
-        android:textColor="@color/white"
+        android:textColor="@android:color/holo_orange_dark"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idCardiologist"
@@ -188,10 +193,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
+        android:layout_marginEnd="96dp"
         android:text="Thoát"
-        android:textColor="@color/white"
+        android:textColor="@android:color/holo_orange_dark"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/idExit"
-        tools:layout_editor_absoluteX="263dp" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idExit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -170,4 +170,12 @@ public class Database extends SQLiteOpenHelper {
         db.delete("ORDERPLACE","FULLNAME=?",str);
         db.close();
     }
+    //xoa deleteCart
+    public void deleteCart(String product){
+        String str[] = new String[1];
+        str[0] = product;
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete("CART","PRODUCT=?",str);
+        db.close();
+    }
 }
