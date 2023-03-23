@@ -3,7 +3,9 @@ package com.example.healthcare;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -40,17 +42,31 @@ public class OrderDetailsActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.mnuDel:
-                //xoa du lieu theo ten
-                AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-                int pos = info.position;
-                String name = order_details[pos][0];
-                Database db = new Database(getApplicationContext(), "HealthCare", null, 1);
-                db.deleteOrder(name);
-                startActivity(new Intent(OrderDetailsActivity.this, OrderDetailsActivity.class));
+             //tao hop thoai dialog
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Thông báo !");
+                builder.setMessage("Bạn có muốn xoá đơn đặt này không ?");
+                builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+                        int pos = info.position;
+                        String name = order_details[pos][0];
+                        Database db = new Database(getApplicationContext(), "HealthCare", null, 1);
+                        db.deleteOrder(name);
+                        startActivity(new Intent(OrderDetailsActivity.this, OrderDetailsActivity.class));
+                    }
+                });
+                builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                builder.show();
                 break;
             default:
                 break;
-
         }
         return false;
     }
