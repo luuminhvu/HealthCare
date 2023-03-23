@@ -33,12 +33,18 @@ public class BuyMedicineBookActivity extends AppCompatActivity {
             public void onClick(View v) {
                 SharedPreferences sp = getSharedPreferences("share_prefs", Context.MODE_PRIVATE);
                 String username = sp.getString("username", "").toString();
-                Database db = new Database(getApplicationContext(),"HealthCare",null,1);
-                db.addOrder(username,edFullName.getText().toString(),edAddress.getText().toString(),edContact.getText().toString(),Integer.parseInt(edPincode.getText().toString()),date.toString(),"",Float.parseFloat(price[1].toString()),"medicine");
-                db.removeCart(username,"medicine");
-                Toast.makeText(getApplicationContext(), "\n" +
-                        "Đặt thuốc thành công", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(BuyMedicineBookActivity.this,HomeActivity.class));
+                Database db = new Database(getApplicationContext(), "HealthCare", null, 1);
+               //Kiem soat du lieu
+                if(edFullName.getText().toString().equals("") || edAddress.getText().toString().equals("") || edPincode.getText().toString().equals("") || edContact.getText().toString().equals("")){
+                    Toast.makeText(getApplicationContext(), "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    db.addOrder(username, edFullName.getText().toString(), edAddress.getText().toString(), edContact.getText().toString(), Integer.parseInt(edPincode.getText().toString()), date.toString(), "", Float.parseFloat(price[1].toString()), "medicine");
+                    db.removeCart(username, "medicine");
+                    Toast.makeText(getApplicationContext(), "\n" +
+                            "Đặt thuốc thành công", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(BuyMedicineBookActivity.this, HomeActivity.class));
+                }
             }
         });
 

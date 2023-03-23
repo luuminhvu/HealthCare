@@ -33,11 +33,16 @@ public class LabTestBookActivity extends AppCompatActivity {
                 SharedPreferences sp = getSharedPreferences("share_prefs", MODE_PRIVATE);
                 String username = sp.getString("username", "").toString();
                 Database db = new Database(getApplicationContext(),"HealthCare",null,1);
-                db.addOrder(username,edFullName.getText().toString(),edAddress.getText().toString(),edContact.getText().toString(),Integer.parseInt(edPinCode.getText().toString()),date.toString(),time.toString(),Float.parseFloat(price[1].toString()),"Lab");
-                db.removeCart(username,"Lab");
-                Toast.makeText(getApplicationContext(), "\n" +
-                        "Đặt chỗ thành công", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(LabTestBookActivity.this, HomeActivity.class));
+                if(edFullName.getText().toString().equals("") || edAddress.getText().toString().equals("") || edPinCode.getText().toString().equals("") || edContact.getText().toString().equals("")){
+                    Toast.makeText(getApplicationContext(), "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    db.addOrder(username,edFullName.getText().toString(),edAddress.getText().toString(),edContact.getText().toString(),Integer.parseInt(edPinCode.getText().toString()),date.toString(),time.toString(),Float.parseFloat(price[1].toString()),"Lab");
+                    db.removeCart(username,"Lab");
+                    Toast.makeText(getApplicationContext(), "\n" +
+                            "Đặt chỗ thành công", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(LabTestBookActivity.this, HomeActivity.class));
+                }
             }
         });
 

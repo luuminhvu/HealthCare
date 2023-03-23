@@ -45,7 +45,7 @@ public class RegisterActivity extends AppCompatActivity {
                     if (password.compareTo(confirmPassword) == 0) {
                         if (InValid(password)) {
                             db.Register(username,email,password);
-                            Toast.makeText(RegisterActivity.this, "Đăng Kí Thàn Công", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Đăng Kí Thành Công", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                         } else {
                             Toast.makeText(RegisterActivity.this, "Mật khẩu phải chứa ít nhất 1 chữ cái, 1 chữ số và 1 ký tự đặc biệt", Toast.LENGTH_SHORT).show();
