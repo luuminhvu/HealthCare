@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroupmain"
+    tools:context=".InformationAppActivity">
+
+    <TextView
+        android:id="@+id/tvInfoAppTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="666dp"
+        android:text="HEALTHCARE APP"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInfoAppVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="177dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="176dp"
+        android:text="Thông tin App"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoAppTitle" />
+
+    <EditText
+        android:id="@+id/edTextInfoApp"
+        android:layout_width="290dp"
+        android:layout_height="313dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Phiên bản : 1.0 Beta \n\n Tên tác giả :\n\n Nguyễn Trung Đức \n\n Phạm Minh Tuấn \n\n Lưu Văn Vũ"
+        android:textColor="@color/purple_500"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoAppVersion"
+        app:layout_constraintVertical_bias="0.126" />
+
+    <TextView
+        android:id="@+id/tvInfoAppContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Thông tin và liên hệ"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edTextInfoApp" />
+
+    <ImageView
+        android:id="@+id/imgViewContact"
+        android:layout_width="67dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvNoCopyRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.209"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoAppContact"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/contact"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/tvEmailContact"
+        android:layout_width="184dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:text="devteam13@gmail.com"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgViewContact"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoAppContact"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvNoCopyRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="No CopyRight"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmailContact" />
+
+    <Button
+        android:id="@+id/buttonInfoAppBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Quay Lại"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNoCopyRight"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

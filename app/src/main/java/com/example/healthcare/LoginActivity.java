@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     Button btnLogin;
     TextView tvRegister;
     private BroadcastReceiver Br;
+    ImageView img;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         edPassword = findViewById(R.id.editTextLoginPassword);
         btnLogin = findViewById(R.id.buttonLogin);
         tvRegister = findViewById(R.id.textViewNewUser);
+        img = findViewById(R.id.imgHelpdesk);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,6 +63,12 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, InformationAppActivity.class));
+            }
+        });
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         if(networkInfo!=null && networkInfo.isConnected()){
@@ -72,6 +81,7 @@ public class LoginActivity extends AppCompatActivity {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED);
         registerReceiver(Br, intentFilter);
+
 
     }
 }
