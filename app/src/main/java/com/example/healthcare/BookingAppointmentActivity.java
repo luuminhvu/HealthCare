@@ -53,7 +53,7 @@ public class BookingAppointmentActivity extends AppCompatActivity {
         ed1.setText(fullname);
         ed2.setText(address);
         ed3.setText(contact);
-        ed4.setText("Cons Fee: " + fees + "/-");
+        ed4.setText("Giá: " + fees + "$");
         initDatePicker();
         dateButton.setOnClickListener(new View.OnClickListener() {
             @Override

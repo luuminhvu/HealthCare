@@ -16,44 +16,44 @@ import java.util.HashMap;
 
 public class DoctorDetailsActivity extends AppCompatActivity {
     private String[][] doctors_details1 ={
-            {"Doctor Name:Dr. Hoàng Gia Du","Hospital Address: Đống Đa, Hà Nội","Exp :10 năm","Mobile Number: 0382108926","600"},
-            {"Doctor Name:Dr. Đào Xuân Thành","Hospital Address: Đông Anh, Hà Nôi","Exp :8 năm","Mobile Number: 0967094928","500"},
-            {"Doctor Name:Dr. Nguyễn Thế Hào","Hospital Address: Thanh Xuân, Hà Nội","Exp :9 năm","Mobile Number:  090443003","400"},
-            {"Doctor Name:Dr. Vũ Thế Xuân","Hospital Address: Long Biên, Hà Nội","Exp :12 năm","Mobile Number: 0932781567","700"},
-            {"Doctor Name:Dr. Chử Xuân Tùng","Hospital Address: Gia Lâm, Hà Nội","Exp :6 năm","Mobile Number: 0978729742","450"},
-            {"Doctor Name:Dr. Phùng Xuân Nhạn","Hospital Address: Hoàn Kiếm, Hà Nội  ","Exp :11 năm","Mobile Number: 0967224743","600"}
+            {"Tên Bác Sĩ:Dr. Hoàng Gia Du","Địa Chỉ: Đống Đa, Hà Nội","Exp :10 năm","Số Điện Thoại: 0382108926","600"},
+            {"Tên Bác Sĩ:Dr. Đào Xuân Thành","Địa Chỉ: Đông Anh, Hà Nôi","Exp :8 năm","Số Điện Thoại: 0967094928","500"},
+            {"Tên Bác Sĩ:Dr. Nguyễn Thế Hào","Địa Chỉ: Thanh Xuân, Hà Nội","Exp :9 năm","Số Điện Thoại:  090443003","400"},
+            {"Tên Bác Sĩ:Dr. Vũ Thế Xuân","Địa Chỉ: Long Biên, Hà Nội","Exp :12 năm","Số Điện Thoại: 0932781567","700"},
+            {"Tên Bác Sĩ:Dr. Chử Xuân Tùng","Địa Chỉ: Gia Lâm, Hà Nội","Exp :6 năm","Số Điện Thoại: 0978729742","450"},
+            {"Tên Bác Sĩ:Dr. Phùng Xuân Nhạn","Địa Chỉ: Hoàn Kiếm, Hà Nội  ","Exp :11 năm","Số Điện Thoại: 0967224743","600"}
     };
     private String[][] doctors_details2 ={
-            {"Doctor Name:Dr. Nguyễn Xuân Hùng","Hospital Address: Đông Anh, Hà Nôi","Exp :8 năm","Mobile Number: 0967094928","500"},
-            {"Doctor Name:Dr. Phạm Hoàng Hà","Hospital Address: Gia Lâm, Hà Nội","Exp :6 năm","Mobile Number: 0978729742","450"},
-            {"Doctor Name:Dr. Đỗ Mai Lâm","Hospital Address: Đống Đa, Hà Nội","Exp :6 năm","Mobile Number: 0978729742","450"},
-            {"Doctor Name:Dr. Tống Quang Hiếu","Hospital Address: Thanh Xuân, Hà Nội","Exp :9 năm","Mobile Number:  090443003","400"},
-            {"Doctor Name:Dr. Vũ Đức Thịnh","Hospital Address: Long Biên, Hà Nội","Exp :12 năm","Mobile Number: 0932781567","700"},
-            {"Doctor Name:Dr. Phạm Hiếu Tâm","Hospital Address: Hoàn Kiếm, Hà Nội  ","Exp :11 năm","Mobile Number: 0967224743","600"}
+            {"Tên Bác Sĩ:Dr. Nguyễn Xuân Hùng","Địa Chỉ: Đông Anh, Hà Nôi","Exp :8 năm","Số Điện Thoại: 0967094928","500"},
+            {"Tên Bác Sĩ:Dr. Phạm Hoàng Hà","Địa Chỉ: Gia Lâm, Hà Nội","Exp :6 năm","Số Điện Thoại: 0978729742","450"},
+            {"Tên Bác Sĩ:Dr. Đỗ Mai Lâm","Địa Chỉ: Đống Đa, Hà Nội","Exp :6 năm","Số Điện Thoại: 0978729742","450"},
+            {"Tên Bác Sĩ:Dr. Tống Quang Hiếu","Địa Chỉ: Thanh Xuân, Hà Nội","Exp :9 năm","Số Điện Thoại:  090443003","400"},
+            {"Tên Bác Sĩ:Dr. Vũ Đức Thịnh","Địa Chỉ: Long Biên, Hà Nội","Exp :12 năm","Số Điện Thoại: 0932781567","700"},
+            {"Tên Bác Sĩ:Dr. Phạm Hiếu Tâm","Địa Chỉ: Hoàn Kiếm, Hà Nội  ","Exp :11 năm","Số Điện Thoại: 0967224743","600"}
     };
     private String[][] doctors_details3 ={
-            {"Doctor Name:Dr. Nguyễn Trung Đức","Hospital Address: Hà Đông, Hà Nội","Exp :11 năm","Mobile Number: 0333224321","300"},
-            {"Doctor Name:Dr. Phạm Minh Tuấn","Hospital Address: Sơn Tây, Hà Nội","Exp :10 năm","Mobile Number: 012322234","400"},
-            {"Doctor Name:Dr. Lưu Văn Vũ","Hospital Address: Từ Sơn, Bắc Ninh","Exp :7 năm","Mobile Number: 0987678984","500"},
-            {"Doctor Name:Dr. Lê Phú Minh","Hospital Address: Long Biên, Hà Nội","Exp :8 năm","Mobile Number: 0987766455","200"},
-            {"Doctor Name:Dr. Ngô Văn Anh","Hospital Address: Gia Lâm, Hà Nội","Exp :15 năm","Mobile Number: 0123123123","450"},
-            {"Doctor Name:Dr. Vương Kiến Quốc","Hospital Address: Sóc Sơn, Hà Nội","Exp :13 năm","Mobile Number: 0987232123","700"}
+            {"Tên Bác Sĩ:Dr. Nguyễn Trung Đức","Địa Chỉ: Hà Đông, Hà Nội","Exp :11 năm","Số Điện Thoại: 0333224321","300"},
+            {"Tên Bác Sĩ:Dr. Phạm Minh Tuấn","Địa Chỉ: Sơn Tây, Hà Nội","Exp :10 năm","Số Điện Thoại: 012322234","400"},
+            {"Tên Bác Sĩ:Dr. Lưu Văn Vũ","Địa Chỉ: Từ Sơn, Bắc Ninh","Exp :7 năm","Số Điện Thoại: 0987678984","500"},
+            {"Tên Bác Sĩ:Dr. Lê Phú Minh","Địa Chỉ: Long Biên, Hà Nội","Exp :8 năm","Số Điện Thoại: 0987766455","200"},
+            {"Tên Bác Sĩ:Dr. Ngô Văn Anh","Địa Chỉ: Gia Lâm, Hà Nội","Exp :15 năm","Số Điện Thoại: 0123123123","450"},
+            {"Tên Bác Sĩ:Dr. Vương Kiến Quốc","Địa Chỉ: Sóc Sơn, Hà Nội","Exp :13 năm","Số Điện Thoại: 0987232123","700"}
     };
     private String[][] doctors_details4 ={
-            {"Doctor Name:Dr. Nguyễn Xuân Hùng","Hospital Address: Đông Anh, Hà Nôi","Exp :8 năm","Mobile Number: 0967094928","500"},
-            {"Doctor Name:Dr. Phạm Hoàng Hà","Hospital Address: Gia Lâm, Hà Nội","Exp :6 năm","Mobile Number: 0978729742","450"},
-            {"Doctor Name:Dr. Đỗ Mai Lâm","Hospital Address: Đống Đa, Hà Nội","Exp :6 năm","Mobile Number: 0978729742","450"},
-            {"Doctor Name:Dr. Tống Quang Hiếu","Hospital Address: Thanh Xuân, Hà Nội","Exp :9 năm","Mobile Number:  090443003","400"},
-            {"Doctor Name:Dr. Vũ Đức Thịnh","Hospital Address: Long Biên, Hà Nội","Exp :12 năm","Mobile Number: 0932781567","700"},
-            {"Doctor Name:Dr. Phạm Hiếu Tâm","Hospital Address: Hoàn Kiếm, Hà Nội  ","Exp :11 năm","Mobile Number: 0967224743","600"}
+            {"Tên Bác Sĩ:Dr. Nguyễn Xuân Hùng","Địa Chỉ: Đông Anh, Hà Nôi","Exp :8 năm","Số Điện Thoại: 0967094928","500"},
+            {"Tên Bác Sĩ:Dr. Phạm Hoàng Hà","Địa Chỉ: Gia Lâm, Hà Nội","Exp :6 năm","Số Điện Thoại: 0978729742","450"},
+            {"Tên Bác Sĩ:Dr. Đỗ Mai Lâm","Địa Chỉ: Đống Đa, Hà Nội","Exp :6 năm","Số Điện Thoại: 0978729742","450"},
+            {"Tên Bác Sĩ:Dr. Tống Quang Hiếu","Địa Chỉ: Thanh Xuân, Hà Nội","Exp :9 năm","Số Điện Thoại:  090443003","400"},
+            {"Tên Bác Sĩ:Dr. Vũ Đức Thịnh","Địa Chỉ: Long Biên, Hà Nội","Exp :12 năm","Số Điện Thoại: 0932781567","700"},
+            {"Tên Bác Sĩ:Dr. Phạm Hiếu Tâm","Địa Chỉ: Hoàn Kiếm, Hà Nội  ","Exp :11 năm","Số Điện Thoại: 0967224743","600"}
     };
     private String[][] doctors_details5 ={
-            {"Doctor Name:Dr. Hoàng Gia Du","Hospital Address: Đống Đa, Hà Nội","Exp :10 năm","Mobile Number: 0382108926","600"},
-            {"Doctor Name:Dr. Đào Xuân Thành","Hospital Address: Đông Anh, Hà Nôi","Exp :8 năm","Mobile Number: 0967094928","500"},
-            {"Doctor Name:Dr. Nguyễn Thế Hào","Hospital Address: Thanh Xuân, Hà Nội","Exp :9 năm","Mobile Number:  090443003","400"},
-            {"Doctor Name:Dr. Vũ Thế Xuân","Hospital Address: Long Biên, Hà Nội","Exp :12 năm","Mobile Number: 0932781567","700"},
-            {"Doctor Name:Dr. Chử Xuân Tùng","Hospital Address: Gia Lâm, Hà Nội","Exp :6 năm","Mobile Number: 0978729742","450"},
-            {"Doctor Name:Dr. Phùng Xuân Nhạn","Hospital Address: Hoàn Kiếm, Hà Nội  ","Exp :11 năm","Mobile Number: 0967224743","600"}
+            {"Tên Bác Sĩ:Dr. Hoàng Gia Du","Địa Chỉ: Đống Đa, Hà Nội","Exp :10 năm","Số Điện Thoại: 0382108926","600"},
+            {"Tên Bác Sĩ:Dr. Đào Xuân Thành","Địa Chỉ: Đông Anh, Hà Nôi","Exp :8 năm","Số Điện Thoại: 0967094928","500"},
+            {"Tên Bác Sĩ:Dr. Nguyễn Thế Hào","Địa Chỉ: Thanh Xuân, Hà Nội","Exp :9 năm","Số Điện Thoại:  090443003","400"},
+            {"Tên Bác Sĩ:Dr. Vũ Thế Xuân","Địa Chỉ: Long Biên, Hà Nội","Exp :12 năm","Số Điện Thoại: 0932781567","700"},
+            {"Tên Bác Sĩ:Dr. Chử Xuân Tùng","Địa Chỉ: Gia Lâm, Hà Nội","Exp :6 năm","Số Điện Thoại: 0978729742","450"},
+            {"Tên Bác Sĩ:Dr. Phùng Xuân Nhạn","Địa Chỉ: Hoàn Kiếm, Hà Nội  ","Exp :11 năm","Số Điện Thoại: 0967224743","600"}
     };
     TextView txtTitle;
     Button btnBack;
@@ -95,7 +95,7 @@ public class DoctorDetailsActivity extends AppCompatActivity {
             item.put("line2", doctors_details[i][1]);
             item.put("line3", doctors_details[i][2]);
             item.put("line4", doctors_details[i][3]);
-            item.put("line5", "Cons Fee:"+doctors_details[i][4]+"/-");
+            item.put("line5", "Giá tiền:"+doctors_details[i][4]+"$");
             list.add(item);
         }
         sa=new SimpleAdapter(this,list,
