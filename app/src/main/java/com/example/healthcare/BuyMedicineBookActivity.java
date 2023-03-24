@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class BuyMedicineBookActivity extends AppCompatActivity {
     EditText edFullName,edAddress,edPincode,edContact;
-    Button btnBook;
+    Button btnBook,btnBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +24,8 @@ public class BuyMedicineBookActivity extends AppCompatActivity {
         edPincode = findViewById(R.id.editTextMDBPinCode);
         edContact = findViewById(R.id.editTextMDBContact);
         btnBook= findViewById(R.id.buttonMDBBook);
+        btnBack = findViewById(R.id.buttonMDBBack);
+
         Intent intent = getIntent();
         String[] price = intent.getStringExtra("price").toString().split(java.util.regex.Pattern.quote(":"));
         String date = intent.getStringExtra("date");
@@ -45,6 +47,12 @@ public class BuyMedicineBookActivity extends AppCompatActivity {
                             "Đặt thuốc thành công", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(BuyMedicineBookActivity.this, HomeActivity.class));
                 }
+            }
+        });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(BuyMedicineBookActivity.this, BuyMedicineActivity.class));
             }
         });
 
