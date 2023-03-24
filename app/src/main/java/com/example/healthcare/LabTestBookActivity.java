@@ -27,6 +27,7 @@ public class LabTestBookActivity extends AppCompatActivity {
         String date = intent.getStringExtra("date");
         String time = intent.getStringExtra("time");
         btnBook = findViewById(R.id.buttonLTBBook);
+        btnBack = findViewById(R.id.buttonLTBBack);
         btnBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +44,12 @@ public class LabTestBookActivity extends AppCompatActivity {
                             "Đặt chỗ thành công", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(LabTestBookActivity.this, HomeActivity.class));
                 }
+            }
+        });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LabTestBookActivity.this, LabTestActivity.class));
             }
         });
 
