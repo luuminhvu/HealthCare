@@ -29,7 +29,7 @@ public class LabTestDetailsActivity extends AppCompatActivity {
         Intent intent = getIntent();
         tvPackageName.setText(intent.getStringExtra("text1"));
         edDetails.setText(intent.getStringExtra("text2"));
-        tvTotalCost.setText("Total Cost: " + intent.getStringExtra("text3")+"/-");
+        tvTotalCost.setText("Tổng tiền: " + intent.getStringExtra("text3")+"$");
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -15,15 +15,15 @@ import java.util.HashMap;
 
 public class LabTestActivity extends AppCompatActivity {
     private String[][] packages ={
-            {"Package1 : Full Body Checkup","","","","999"},
-            {"Package2 : Blood Glucose Fasting","","","","299"},
-            {"Package3 : Covid-19 Antibody","","","","300"},
-            {"Package4 : Thyroid Check","","","","283"},
-            {"Package5 : Imunity Checkup","","","","532"}
+            {"Package1 : Kiểm tra tổng quát","","","","999"},
+            {"Package2 : Kiểm tra đường huyết","","","","299"},
+            {"Package3 : Kiểm tra Covid","","","","300"},
+            {"Package4 : Kiểm tra tuyến giáp","","","","283"},
+            {"Package5 : Kiểm tra hệ miễn dịch","","","","532"}
     };
     private String [] package_details = {
-            "Blood Glucose Fasting\n" + "Complete Hemogram\n", "Blood Glucose Fasting", "Covid 19 Antibody IgG", "Covid 19 Antibody IgM", "Covid 19 Antigen",
-            "Complete Hemogram\n" + "CRP\n" + "ESR\n" + "Fasting Blood Sugar\n" + "Lipid Profile\n" + "RBS\n" + "Thyroid Profile\n" + "Urea\n" + "Uric Acid\n" + "Vitamin D\n" + "Vitamin B12\n" + "Vitamin B1\n" + "Vitamin B2\n" + "Vitamin B3\n" + "Vitamin B6\n" + "Vitamin B9\n" + "Vitamin B12\n" + "Vitamin C\n" + "Vitamin E\n" + "Vitamin K\n" + "Vitamin A\n" + "Vitamin D\n" + "Vitamin B1\n" + "Vitamin B2\n" + "Vitamin B3\n" + "Vitamin B6\n" + "Vitamin B9\n" + "Vitamin B12\n" + "Vitamin C\n" + "Vitamin E\n" + "Vitamin K\n" + "Vitamin A\n" + "Vitamin D\n" + "Vitamin B1\n" + "Vitamin B2\n" + "Vitamin B3\n" + "Vitamin B6\n" + "Vitamin B9\n" + "Vitamin B12\n" + "Vitamin C\n" + "Vitamin E\n" + "Vitamin K\n" + "Vitamin A\n" + "Vitamin D\n" + "Vitamin B1\n" + "Vitamin B2\n" + "Vitamin B3\n" + "Vitamin B6\n" + "Vitamin B9\n" + "Vitamin B12\n" + "Vitamin C\n" + "Vitamin E\n" + "Vitamin K\n" + "Vitamin A\n" + "Vitamin D\n" + "Vitamin B1\n" + "Vitamin B2\n" + "Vitamin B3\n" + "Vitamin B6\n" + "Vitamin B9\n" + "Vitamin B12\n" + "Vitamin C\n" + "Vitamin E\n" + "Vitamin K\n" + "Vitamin A\n" + "Vitamin D\n" + "Vitamin B1\n" + "Vitamin B2\n" + "Vitamin B3\n" + "Vitamin B6\n" + "Vitamin B9\n" + "Vitamin B12\n" + "Vitamin C\n" + "Vitamin E\n" + "Vitamin K\n" + "Vitamin A\n" + "Vitamin D\n" + "Vitamin B1"
+            "Kiểm tra bên trong\n" + "Kiểm tra bên ngoài\n" + "Chụp X-quang\n", "Kiểm tra lượng đường trong máu", "Kiểm tra kháng thể Covid"+ "Tiêm Vacxin",
+            "Kiểm tra tuyến giáp\n" + "CRP\n" + "ESR\n" , "Kiểm tra hệ miễn dịch\n"+ "RBS\n"
     };
     HashMap<String, String>item;
     ArrayList list;
@@ -51,7 +51,7 @@ public class LabTestActivity extends AppCompatActivity {
             item.put("line2", packages[i][1]);
             item.put("line3", packages[i][2]);
             item.put("line4", packages[i][3]);
-            item.put("line5", "Giá Tiền: "+ packages[i][4]+"/-");
+            item.put("line5", "Giá Tiền: "+ packages[i][4]+"$");
             list.add(item);
         }
         adapter = new SimpleAdapter(LabTestActivity.this, list, R.layout.multi_lines,

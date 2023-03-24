@@ -84,7 +84,7 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
             String arrData = dbData.get(i).toString();
             String[] strData = arrData.split(java.util.regex.Pattern.quote("$"));
             packages[i][0] = strData[0];
-            packages[i][4] = "Giá: " + strData[1] + "/-";
+            packages[i][4] = "Giá: " + strData[1] + "$";
             totalAmount = totalAmount + Float.parseFloat(strData[1]);
         }
         tvTotal.setText("Total: " + totalAmount);
